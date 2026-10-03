@@ -1,4 +1,31 @@
-                    nyc_job_scraper.py
+# Project Architecture
+#
+# NYC-Job-Extractor/
+# ├── scraper/
+# │   ├── job_scraper.py
+# │   └── url_extractor.py
+# ├── analysis/
+# │   ├── job_filter.py
+# │   ├── job_extractor.py
+# │   └── organization_matcher.py
+# ├── ai/
+# │   ├── llm_analysis.py
+# │   └── resume_generator.py
+# ├── database/
+# │   └── database.py
+# ├── resume/
+# │   └── word_generator.py
+# └── data/
+#     └── nyc_agencies.py
+
+
+
+
+
+
+
+
+                  nyc_job_scraper.py
                     MAIN APPLICATION
                            │
         ┌──────────────────┼──────────────────┐
