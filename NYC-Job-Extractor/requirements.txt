@@ -1,0 +1,9 @@
+streamlit
+pandas
+langchain
+langchain-ollama
+selenium
+webdriver-manager
+beautifulsoup4
+duckduckgo-search
+python-docx
