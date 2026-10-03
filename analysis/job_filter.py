@@ -30,8 +30,6 @@ if any(
 
 
 
-
-# Reusable functions
 FORBIDDEN_KEYWORDS = [
     "senior",
     "manager",
