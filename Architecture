@@ -1,0 +1,27 @@
+                    nyc_job_scraper.py
+                    MAIN APPLICATION
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+     scraper/          analysis/             ai/
+        │                  │                  │
+   ┌────┴────┐       ┌─────┼─────┐       ┌───┴────────┐
+   │         │       │     │     │       │            │
+ scraper   URLs   filter extractor org   LLM       resume
+                                        │
+                                        ▼
+                                   Llama/Ollama
+
+                           │
+             ┌─────────────┴─────────────┐
+             ▼                           ▼
+        database/                     resume/
+             │                           │
+             ▼                           ▼
+        SQLite DB                    Word DOCX
+
+                           │
+                           ▼
+                       Streamlit
+                         UI
