@@ -1,0 +1,39 @@
+def scrape_job_board(url):
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36"
+    )
+
+    driver = None
+
+    try:
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(
+            service=service,
+            options=options
+        )
+
+        driver.set_page_load_timeout(30)
+        driver.get(url)
+        time.sleep(3)
+
+        html = driver.page_source
+
+        if not html or len(html.strip()) < 100:
+            return "Error: Scraped page content was empty or blocked."
+
+    except Exception as e:
+        return f"Scraper Error: {str(e)}"
+
+    finally:
+        if driver:
+            try:
+                driver.quit()
+            except:
+                pass
+
+    return html
